@@ -13,7 +13,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					initial: "white"
 				}
 			],
-			charactersStarWars: []
+			charactersStarWars: [],
+			color: "rojo"
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -47,6 +48,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 						setStore({ charactersStarWars: data.results });
 					})
 					.catch(err => err)
+			},
+			changeRedColor: ()=>{
+				setStore({color: "verde"})
 			}
 
 		}
